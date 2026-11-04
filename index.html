@@ -349,21 +349,58 @@ print("Hello", i)
             </map>
 
             <h3>Send me a message</h3>
-            <form action="thank-you.html" method="get">
+            <form action="thank-you.html" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Your Details</legend>
                     <label for="fullname">Full name:</label>
-                    <input type="text" id="fullname" name="fullname">
+                    <input type="text" id="fullname" name="fullname" required>
                     <br><br>
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" required>
                     <!-- The name attribute is essential because it tells the browser which key to use when submitting a form field's value  -->
+                </fieldset>
+                <fieldset>
+                    <legend>Project Details</legend>
+                    <label for="phone">Phone (optional):</label>
+                    <input type="text" id="phone" name="phone" pattern="0[79][0-9]{8}"
+                        title="10 digits starting with 09 or 07">
+                    <br><br>
+
+                    <p>Preferred contact method:</p>
+                    <input type="radio" id="by-email" name="contact-method" value="email" checked>
+                    <label for="by-email">Email</label>
+                    <input type="radio" id="by-phone" name="contact-method" value="phone">
+                    <label for="by-phone">Phone</label>
+                    <br><br>
+
+                    <label for="meeting">Preferred meeting date:</label>
+                    <input type="date" id="meeting" name="meeting" min="2026-11-01">
+                    <br><br>
+
+                    <label for="weeks">Project length (weeks):</label>
+                    <input type="number" id="weeks" name="weeks" min="1" max="52" step="1">
+                    <br><br>
+
+                    <label for="budget">Your budget (ETB):</label>
+                    <input type="number" id="budget" name="budget" min="1000" step="500">
+                    <br><br>
+
+                    <label for="brief">Attach a project brief:</label>
+                    <input type="file" id="brief" name="brief">
+                    <br><br>
+
+                    <label for="colour">Preferred website colour:</label>
+                    <input type="color" id="colour" name="colour" value="#1f5fa8">
+                    <br><br>
+
+                    <label for="rating">How much do you like my portfolio? (1–10)</label>
+                    <input type="range" id="rating" name="rating" min="1" max="10" value="7">
                 </fieldset>
 
                 <fieldset>
                     <legend>Your Message</legend>
                     <label for="reason">Reason for contacting me:</label>
-                    <select id="reason" name="reason">
+                    <select id="reason" name="reason" required>
                         <optgroup label="Work">
                             <option value="internship">Internship offer</option>
                             <option value="freelance">Freelance project</option>
@@ -377,7 +414,10 @@ print("Hello", i)
                     </select>
                     <br><br>
                     <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="6" cols="40"></textarea>
+                    <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+                    <br>
+                    <input type="checkbox" id="copy" name="copy" value="yes">
+                    <label for="copy">Send me a copy of this message</label>
                 </fieldset>
                 <button type="submit">Send Message</button>
                 <button type="reset">Clear</button>
