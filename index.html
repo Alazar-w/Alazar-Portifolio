@@ -14,8 +14,9 @@
 
 <body>
     <header>
-        <h1 align="center"><img src="images/profile.jpg" alt="Portrait of Alazar Walle smiling" title="Alazar Walle"
-                width="200" height="200"><br>Alazar Walle</h1>
+        <canvas id="logo" width="120" height="120">Alazar Walle logo</canvas>
+        <h1>Alazar Walle<br><img src="images/profile.jpg" alt="Portrait of Alazar Walle smiling" title="Alazar Walle"
+                width="200" height="200"></h1>
         <p>Software Engineering student and aspiring web developer.</p>
 
         <button type="button" onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
@@ -112,6 +113,8 @@
                 <label for="lvl-cpp">C++</label>
                 <meter id="lvl-cpp" value="0.6" min="0" max="1">60%</meter>
             </p>
+
+            <canvas id="skillsChart" width="300" height="150"></canvas>
 
             <h3>My Learning Roadmap</h3>
             <ol type="1">
@@ -477,6 +480,42 @@ print("Hello", i)
 
         </section>
     </main>
+    <script>
+        const canvas = document.getElementById('logo');
+        const ctx = canvas.getContext('2d');
+        // 1. Blue square background: x, y, width, height
+        ctx.fillStyle = "#1f5fa8";
+        ctx.fillRect(0, 0, 120, 120);
+        // 2. White circle: centre x, centre y, radius, start angle, end angle
+        ctx.beginPath();
+        ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+        ctx.fillStyle = "white";
+        ctx.fill();
+        // 3. Initials in the middle
+        ctx.fillStyle = "#1f5fa8";
+        ctx.font = "bold 36px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("AW", 60, 62);
+    </script>
+    <script>
+        const canvas2 = document.getElementById('skillsChart');
+        const ctx2 = canvas2.getContext('2d');
+
+        // HTML
+        ctx2.fillStyle = "deepblue";
+        ctx2.fillRect(20, 34, 40, 96);
+        ctx2.fillRect(90, 46, 40, 84);
+        ctx2.fillRect(160, 58, 40, 72);
+        ctx2.fillRect(230, 22, 40, 108);
+
+        ctx2.fillStyle = "black";
+        ctx2.font = "12px Arial";
+        ctx2.fillText("HTML", 30, 145);
+        ctx2.fillText("CSS", 100, 145);
+        ctx2.fillText("JavaScript", 160, 145);
+        ctx2.fillText("Python", 235, 145);
+    </script>
 </body>
 <footer>
     <p>Last updated: <time datetime="2026-11-05">5 November 2026</time></p>

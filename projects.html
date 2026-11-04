@@ -15,7 +15,6 @@
 <body>
     <header>
         <p><a href="index.html">← Back to Home</a></p>
-        <p><a href="https://www.w3.org/contact/">← w3 reference</a></p>
 
         <nav>
             <a href="index.html">Home</a> |
@@ -25,23 +24,44 @@
     </header>
 
     <h1>My Projects</h1>
-    <p>Details of every project I have built. The summary table comes in Lab 7.</p>
+    <p>Details of every project I have built.</p>
+    <table border="1" cellpadding="4" cellspacing="0">
+        <caption>Project Summary</caption>
+        <thead>
+            <tr>
+                <th>Project</th>
+                <th>Language</th>
+                <th>Year</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Simple Calculator</td>
+                <td>Python</td>
+                <td>2024</td>
+                <td><a href="#calculator">Details</a></td>
+            </tr>
+            <tr>
+                <td>Library Management System</td>
+                <td>C++</td>
+                <td>2025</td>
+                <td><a href="#library-management">Details</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" align="center"><strong>Total projects</strong></td>
+                <td align="center"><strong>2</strong></td>
+            </tr>
+        </tfoot>
+    </table>
 
     <article id="calculator">
         <h3>Simple Calculator <time datetime="2024">-- 2024 </time></h3>
         <img src="images/project-calculator.png" alt="Screenshot of the calculator showing 12 + 30 = 42" width="400"
             height="250">
         <p>A calculator that adds, subtracts, multiplies and divides.</p>
-
-        <details open>
-            <summary>How I built it</summary>
-            <ol>
-                <li>Designed the user interface and operation layout.</li>
-                <li>Implemented basic arithmetic logic for addition, subtraction, multiplication, and division.</li>
-                <li>Handled edge cases such as division by zero and input validation.</li>
-                <li>Tested UI interactions and verified calculation accuracy.</li>
-            </ol>
-        </details>
 
         <h3>Watch the demo</h3>
         <video controls poster="images/project-demo-poster.jpg" width="640" height="360">
@@ -50,6 +70,16 @@
             <track src="media/project-demo.vtt" kind="captions" srclang="en" label="English" default>
             Your browser does not support the video tag.
         </video>
+
+        <details>
+            <summary>How I built it</summary>
+            <ol>
+                <li>Designed the user interface and operation layout.</li>
+                <li>Implemented basic arithmetic logic for addition, subtraction, multiplication, and division.</li>
+                <li>Handled edge cases such as division by zero and input validation.</li>
+                <li>Tested UI interactions and verified calculation accuracy.</li>
+            </ol>
+        </details>
 
         <h3>Technologies Used</h3>
         <ul>
@@ -66,13 +96,15 @@
             height="250">
         <p>The library is managed across the system.</p>
 
-        <h3>How I built it</h3>
-        <ol>
-            <li>Defined data structures and schemas for book records and user profiles.</li>
-            <li>Developed functionalities for adding, updating, borrowing, and returning books.</li>
-            <li>Implemented basic search and filter routines for catalog management.</li>
-            <li>Tested book availability tracking and transaction flows.</li>
-        </ol>
+        <details>
+            <summary>How I built it</summary>
+            <ol>
+                <li>Defined data structures and schemas for book records and user profiles.</li>
+                <li>Developed functionalities for adding, updating, borrowing, and returning books.</li>
+                <li>Implemented basic search and filter routines for catalog management.</li>
+                <li>Tested book availability tracking and transaction flows.</li>
+            </ol>
+        </details>
 
         <h3>Technologies Used</h3>
         <ul>
@@ -80,9 +112,12 @@
             <li>File Handling / Data Structures</li>
         </ul>
     </article>
+    <p>Useful reference <a href="https://www.w3.org/contact/">W3C -- HTML standards</a></p>
+
 </body>
 <footer>
     <p>&copy;Copyright 2026 Alazar Walle. All rights reserved.</p>
+    <p>Last updated: <time datetime="2026-11-05">5 November 2026</time></p>
 </footer>
 
 </html>
