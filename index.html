@@ -347,6 +347,42 @@ print("Hello", i)
                 <area shape="circle" coords="300,100,70" href="https://www.linkedin.com/in/alazarwalle" alt="LinkedIn">
                 <area shape="rect" coords="420,40,580,160" href="mailto:alazarwalle45@gmail.com" alt="Email">
             </map>
+
+            <h3>Send me a message</h3>
+            <form action="thank-you.html" method="get">
+                <fieldset>
+                    <legend>Your Details</legend>
+                    <label for="fullname">Full name:</label>
+                    <input type="text" id="fullname" name="fullname">
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                    <!-- The name attribute is essential because it tells the browser which key to use when submitting a form field's value  -->
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your Message</legend>
+                    <label for="reason">Reason for contacting me:</label>
+                    <select id="reason" name="reason">
+                        <optgroup label="Work">
+                            <option value="internship">Internship offer</option>
+                            <option value="freelance">Freelance project</option>
+                            <option value="job">Full-time job</option>
+                        </optgroup>
+                        <optgroup label="Study">
+                            <option value="group-project">Group project</option>
+                            <option value="tutoring">Tutoring</option>
+                        </optgroup>
+                        <option value="other">Other</option>
+                    </select>
+                    <br><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="6" cols="40"></textarea>
+                </fieldset>
+                <button type="submit">Send Message</button>
+                <button type="reset">Clear</button>
+            </form>
+
         </section>
     </main>
 </body>
