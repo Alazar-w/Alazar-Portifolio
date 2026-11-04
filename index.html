@@ -18,6 +18,14 @@
                 width="200" height="200"><br>Alazar Walle</h1>
         <p>Software Engineering student and aspiring web developer.</p>
 
+        <button type="button" onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
+        <dialog id="hireDialog">
+            <h2>Available for internships</h2>
+            <p>I am available for internships and freelance web projects from June 2027.</p>
+            <p><a href="#contact">Send me a message</a> or <a href="files/cv.pdf" download>download my CV</a>.</p>
+            <button type="button" onclick="document.getElementById('hireDialog').close()">Close</button>
+        </dialog>
+
         <nav>
             <a href="#about">About</a> |
             <a href="#skills">Skills</a> |
@@ -84,6 +92,24 @@
                     </ul>
                 </li>
             </ul>
+
+            <h3>Skill Levels</h3>
+            <p>
+                <label for="lvl-html">HTML</label>
+                <meter id="lvl-html" value="0.8" min="0" max="1">80%</meter>
+            </p>
+            <p>
+                <label for="lvl-python">Python</label>
+                <meter id="lvl-python" value="0.7" min="0" max="1">70%</meter>
+            </p>
+            <p>
+                <label for="lvl-js">JavaScript</label>
+                <meter id="lvl-js" value="0.2" min="0" max="1" low="0.3" high="0.7" optimum="1">20%</meter>
+            </p>
+            <p>
+                <label for="lvl-cpp">C++</label>
+                <meter id="lvl-cpp" value="0.6" min="0" max="1">60%</meter>
+            </p>
 
             <h3>My Learning Roadmap</h3>
             <ol type="1">
@@ -158,6 +184,10 @@ print("Hello", i)
             <h2>Education</h2>
             <h3>BSc in Software Engineering</h3>
             <p>Addis Ababa Science and Technology University, 2023 – present</p>
+            <p>
+                <label for="degree">Degree progress:</label>
+                <progress id="degree" value="40" max="100">40%</progress> 40%
+            </p>
             <table border="1" cellpadding="8" cellspacing="0">
                 <thead>
                     <tr>
