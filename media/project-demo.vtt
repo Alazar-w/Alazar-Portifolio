@@ -1,0 +1,13 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.000
+This is my Simple Calculator, written in Python.
+
+00:00:03.000 --> 00:00:06.000
+I enter the first number, 12, and the operator +.
+
+00:00:06.000 --> 00:00:09.000
+Then I enter the second number, 30.
+
+00:00:09.000 --> 00:00:12.000
+The program prints the result: 42.
