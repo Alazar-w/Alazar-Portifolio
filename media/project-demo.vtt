@@ -1,13 +1,16 @@
 WEBVTT
 
 00:00:00.000 --> 00:00:03.000
-This is my Simple Calculator, written in Python.
+This is my Simple Calculator, developed using Python.
 
 00:00:03.000 --> 00:00:06.000
-I enter the first number, 12, and the operator +.
+First, I enter 12 as the first number and select addition.
 
 00:00:06.000 --> 00:00:09.000
-Then I enter the second number, 30.
+Next, I enter 30 as the second number.
 
 00:00:09.000 --> 00:00:12.000
-The program prints the result: 42.
+The calculator performs the addition and displays the result: 42.
+
+00:00:12.000 --> 00:00:14.000
+This part of the captions will not be displayed
