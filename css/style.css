@@ -194,3 +194,8 @@ tbody tr:nth-child(even) {
 .card:hover {
     background-color: #f0f7f4;
 }
+
+/* links to my own pages, except the menu links */
+:not(nav) > a[href$=".html"]::after {
+    content: " →";
+}
