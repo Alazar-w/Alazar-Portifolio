@@ -22,36 +22,35 @@ body {
     line-height: 1.6;        /* 1.6 × the font size: easier to read */
 }
 
+/* ---------- Headings ---------- */
+h1, h2, h3 {
+    line-height: 1.2;
+    font-weight: 600;
+}
+
 h1 {
     color: #0f6b5c;                 /* hex */
-}
-
-h1 { font-size: 2.5rem; }   /* 40px: rem kept, a name at 6vw gets tiny on phones and huge on wide screens */
-h2 { font-size: 1.8rem; }   /* about 29px */
-h3 { font-size: 1.2rem; }   /* about 19px */
-
-h2 {
-    color: rgb(15, 107, 92);        /* the same blue in RGB */
-}
-
-h3 {
-    color: hsl(170, 75%, 24%);      /* the same blue in HSL */
-}
-
-mark {
-    background-color: rgba(250, 190, 10, 0.35);   /* see-through orange */
-}
-
-h1 {
+    font-size: 2.5rem;   /* 40px: rem kept, a name at 6vw gets tiny on phones and huge on wide screens */
     text-align: center;
     font-weight: 700;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
+    color: rgb(15, 107, 92);        /* the same green in RGB */
+    font-size: 1.8rem;   /* about 29px */
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
+}
+
+h3 {
+    color: hsl(170, 75%, 24%);      /* the same green in HSL */
+    font-size: 1.2rem;   /* about 19px */
+}
+
+mark {
+    background-color: rgba(250, 190, 10, 0.35);   /* see-through gold */
 }
 
 a {
@@ -66,4 +65,56 @@ blockquote {
 
 code, pre {
     font-family: 'Courier New', monospace;
+}
+
+/* ---------- Components ---------- */
+.tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5b6e6a;
+    letter-spacing: 1px;
+}
+
+.btn {
+    background-color: #0f6b5c;
+    color: white;
+    font-family: inherit;      /* buttons do not inherit fonts by default */
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #5b6e6a;
+}
+
+.card {
+    background-color: white;
+}
+
+#contact {
+    background-color: #e3f0ec;
+}
+
+/* ---------- Combinators ---------- */
+/* descendant: every link inside the menu */
+nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* child: only paragraphs directly inside a card */
+.card > p {
+    color: #5b6e6a;
+}
+
+/* adjacent sibling: the first paragraph after each section heading */
+h2 + p {
+    font-size: 1.1rem;
+}
+
+/* general sibling: every label after a legend in the same fieldset */
+legend ~ label {
+    font-weight: 600;
 }
