@@ -66,3 +66,28 @@ blockquote {
 code, pre {
     font-family: 'Courier New', monospace;
 }
+
+/* ---------- Components ---------- */
+.tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5b6e6a;
+    letter-spacing: 1px;
+}
+
+.btn {
+    background-color: #0f6b5c;
+    color: white;
+    font-family: inherit;      /* buttons do not inherit fonts by default */
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #5b6e6a;
+}
+
+.card {
+    background-color: white;
+}
