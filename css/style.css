@@ -95,3 +95,26 @@ code, pre {
 #contact {
     background-color: #e3f0ec;
 }
+
+/* ---------- Combinators ---------- */
+/* descendant: every link inside the menu */
+nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* child: only paragraphs directly inside a card */
+.card > p {
+    color: #5b6e6a;
+}
+
+/* adjacent sibling: the first paragraph after each section heading */
+h2 + p {
+    font-size: 1.1rem;
+}
+
+/* general sibling: every label after a legend in the same fieldset */
+legend ~ label {
+    font-weight: 600;
+}
