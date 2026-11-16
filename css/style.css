@@ -3,10 +3,10 @@
    ========================================== */
 
 /* Palette
-   Primary  #1f5fa8   (blue, same as the logo)
-   Dark     #22313f   (text)
-   Accent   hsl(37, 91%, 55%)   (orange)
-   Light    #f4f6f9   (page background)
+   Primary  #0f6b5c   (deep green)
+   Dark     #1d2b2a   (text)
+   Accent   hsl(42, 95%, 50%)   (gold)
+   Light    #f3f7f5   (page background)
 */
 
 /* ---------- Base ---------- */
@@ -15,15 +15,15 @@ html {
 }
 
 body {
-    background-color: #f4f6f9;
-    color: #22313f;                 /* hex */
-    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f3f7f5;
+    color: #1d2b2a;                 /* hex */
+    font-family: 'Nunito', Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.6;        /* 1.6 × the font size: easier to read */
 }
 
 h1 {
-    color: #1f5fa8;                 /* hex */
+    color: #0f6b5c;                 /* hex */
 }
 
 h1 { font-size: 2.5rem; }   /* 40px */
@@ -31,15 +31,15 @@ h2 { font-size: 1.8rem; }   /* about 29px */
 h3 { font-size: 1.2rem; }   /* about 19px */
 
 h2 {
-    color: rgb(31, 95, 168);        /* the same blue in RGB */
+    color: rgb(15, 107, 92);        /* the same blue in RGB */
 }
 
 h3 {
-    color: hsl(212, 69%, 39%);      /* the same blue in HSL */
+    color: hsl(170, 75%, 24%);      /* the same blue in HSL */
 }
 
 mark {
-    background-color: rgba(245, 166, 35, 0.35);   /* see-through orange */
+    background-color: rgba(250, 190, 10, 0.35);   /* see-through orange */
 }
 
 h1 {
@@ -55,7 +55,7 @@ h2 {
 }
 
 a {
-    color: #1f5fa8;
+    color: #0f6b5c;
     text-decoration: none;   /* removes the underline */
 }
 
