@@ -247,3 +247,52 @@ label[for^="lvl"] {
     display: inline-block;
     width: 7rem;
 }
+
+/* ---------- Spacing and borders ---------- */
+section,
+aside {
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+aside {
+    border-left: 6px solid hsl(42, 95%, 50%);
+}
+
+.card {
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid #d3e0db;
+}
+
+.card img,
+video {
+    display: block;
+    max-width: 100%;   /* never wider than the card */
+    height: auto;      /* keep the proportions */
+}
+
+iframe {
+    display: block;
+    max-width: 100%;   /* no height: auto here, iframes have no natural height */
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem 0.25rem 0 0;
+}
+
+fieldset {
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border: 2px solid #d3e0db;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.4rem;
+}
