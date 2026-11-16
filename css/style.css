@@ -41,3 +41,29 @@ h3 {
 mark {
     background-color: rgba(245, 166, 35, 0.35);   /* see-through orange */
 }
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+a {
+    color: #1f5fa8;
+    text-decoration: none;   /* removes the underline */
+}
+
+blockquote {
+    font-size: 1.2em;        /* 1.2 × the size of its parent */
+    font-style: italic;
+}
+
+code, pre {
+    font-family: 'Courier New', monospace;
+}
