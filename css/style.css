@@ -355,3 +355,16 @@ header .btn {
     background-position: center;
     background-attachment: fixed;
 }
+
+aside {
+    background-image: radial-gradient(circle at top left, #fff4d1, white 70%);
+}
+
+footer {
+    background-color: #1d2b2a;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+dialog::backdrop {
+    background-color: rgba(6, 54, 46, 0.6);   /* green-tinted dimming */
+}
