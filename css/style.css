@@ -263,6 +263,7 @@ aside {
     padding: 1rem 1.5rem;
     margin: 1rem 0;
     border: 1px solid #d3e0db;
+    border-left: 4px solid hsl(42, 95%, 50%);   /* accent on the left only */
 }
 
 .card img,
