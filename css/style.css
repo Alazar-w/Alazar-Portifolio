@@ -320,3 +320,10 @@ caption {
 ul ul {
     list-style-type: square;     /* like type="square" */
 }
+
+/* ---------- Header ---------- */
+header {
+    background-image: url("../images/pattern.png"),
+                      linear-gradient(135deg, #0f6b5c, #06362e);
+    color: white;
+}
