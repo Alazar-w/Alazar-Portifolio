@@ -9,12 +9,18 @@
    Light    #f3f7f5   (page background)
 */
 
+/* ---------- Reset ---------- */
+* {
+    box-sizing: border-box;   /* width includes padding and border */
+}
+
 /* ---------- Base ---------- */
 html {
     font-size: 16px;   /* 1rem = 16px everywhere */
 }
 
 body {
+    margin: 0;                /* remove the browser's default 8px */
     background-color: #f3f7f5;
     color: #1d2b2a;                 /* hex */
     font-family: 'Nunito', Arial, sans-serif;
@@ -198,4 +204,119 @@ tbody tr:nth-child(even) {
 /* links to my own pages, except the menu links */
 :not(nav) > a[href$=".html"]::after {
     content: " →";
+}
+
+/* ---------- Layout ---------- */
+main {
+    max-width: 700px;   /* tried 700px and 1200px: 700px gives the most comfortable line length, nothing overflows */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+}
+
+/* ---------- Display ---------- */
+#logo,
+header img {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+header img {
+    border: 4px solid white;
+    border-radius: 50%;   /* rounds the corners into a circle */
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border: 2px solid #0f6b5c;
+}
+
+label[for^="lvl"] {
+    display: inline-block;
+    width: 7rem;
+}
+
+/* ---------- Spacing and borders ---------- */
+section,
+aside {
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+aside {
+    border-left: 6px solid hsl(42, 95%, 50%);
+}
+
+.card {
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid #d3e0db;
+    border-left: 4px solid hsl(42, 95%, 50%);   /* accent on the left only */
+}
+
+.card img,
+video {
+    display: block;
+    max-width: 100%;   /* never wider than the card */
+    height: auto;      /* keep the proportions */
+}
+
+iframe {
+    display: block;
+    max-width: 100%;   /* no height: auto here, iframes have no natural height */
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem 0.25rem 0 0;
+}
+
+fieldset {
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border: 2px solid #d3e0db;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.4rem;
+}
+
+/* ---------- Tables ---------- */
+table {
+    border-collapse: collapse;   /* one line between cells, like cellspacing="0" */
+    margin: 1rem 0;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #c3d3cc;   /* like border="1" */
+    padding: 0.5rem 0.75rem;     /* like cellpadding */
+}
+
+caption {
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+/* ---------- Lists ---------- */
+ul ul {
+    list-style-type: square;     /* like type="square" */
 }
