@@ -98,10 +98,6 @@ code, pre {
     background-color: white;
 }
 
-#contact {
-    background-color: #e3f0ec;
-}
-
 /* ---------- Combinators ---------- */
 /* descendant: every link inside the menu */
 nav a {
@@ -349,4 +345,13 @@ header nav a:hover {
 header .btn {
     background-color: hsl(42, 95%, 50%);
     color: #1d2b2a;
+}
+
+/* ---------- Contact ---------- */
+#contact {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+                      url("../images/contact-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
