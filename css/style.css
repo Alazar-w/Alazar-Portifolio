@@ -166,3 +166,27 @@ h2::before {
 h2 + p::first-line {
     font-weight: 600;
 }
+
+/* ---------- Link states ---------- */
+a:link    { color: #0f6b5c; }     /* not visited yet */
+a:visited { color: #6a3fa0; }     /* already visited */
+a:hover   { color: hsl(42, 95%, 30%); text-decoration: underline; }
+a:active  { color: #b03a2e; }     /* while the mouse button is down */
+
+.btn:hover {
+    background-color: #0a5044;    /* darker green */
+}
+
+.btn-secondary:hover {
+    background-color: #455754;
+}
+
+/* first step of every ordered list */
+ol li:first-child {
+    font-weight: 600;
+}
+
+/* striped table rows */
+tbody tr:nth-child(even) {
+    background-color: #edf4f1;
+}
