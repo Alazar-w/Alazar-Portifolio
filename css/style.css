@@ -140,3 +140,29 @@ abbr[title] {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+/* ---------- Link icons ---------- */
+a[href^="https"]::after {
+    content: " ↗";            /* leaves this site */
+}
+
+a[href^="mailto"]::before {
+    content: "✉ ";
+}
+
+a[href^="tel"]::before {
+    content: "☎ ";
+}
+
+a[download]::before {
+    content: "⬇ ";
+}
+
+h2::before {
+    content: "// ";
+    color: hsl(42, 95%, 50%);   /* accent gold */
+}
+
+h2 + p::first-line {
+    font-weight: 600;
+}
