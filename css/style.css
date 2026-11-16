@@ -10,6 +10,10 @@
 */
 
 /* ---------- Base ---------- */
+html {
+    font-size: 16px;   /* 1rem = 16px everywhere */
+}
+
 body {
     background-color: #f4f6f9;
     color: #22313f;                 /* hex */
@@ -19,6 +23,10 @@ body {
 h1 {
     color: #1f5fa8;                 /* hex */
 }
+
+h1 { font-size: 2.5rem; }   /* 40px */
+h2 { font-size: 1.8rem; }   /* about 29px */
+h3 { font-size: 1.2rem; }   /* about 19px */
 
 h2 {
     color: rgb(31, 95, 168);        /* the same blue in RGB */
