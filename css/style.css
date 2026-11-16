@@ -2,8 +2,32 @@
    Portfolio stylesheet — Alazar Walle
    ========================================== */
 
+/* Palette
+   Primary  #1f5fa8   (blue, same as the logo)
+   Dark     #22313f   (text)
+   Accent   hsl(37, 91%, 55%)   (orange)
+   Light    #f4f6f9   (page background)
+*/
+
 /* ---------- Base ---------- */
 body {
-    background-color: #f4f6f9;   /* very light grey-blue */
+    background-color: #f4f6f9;
+    color: #22313f;                 /* hex */
     font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #1f5fa8;                 /* hex */
+}
+
+h2 {
+    color: rgb(31, 95, 168);        /* the same blue in RGB */
+}
+
+h3 {
+    color: hsl(212, 69%, 39%);      /* the same blue in HSL */
+}
+
+mark {
+    background-color: rgba(245, 166, 35, 0.35);   /* see-through orange */
 }
