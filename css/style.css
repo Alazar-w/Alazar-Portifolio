@@ -208,7 +208,7 @@ tbody tr:nth-child(even) {
 
 /* ---------- Layout ---------- */
 main {
-    max-width: 900px;
+    max-width: 700px;   /* tried 700px and 1200px: 700px gives the most comfortable line length, nothing overflows */
     margin: 0 auto;
     padding: 0 1rem;
 }
