@@ -26,7 +26,7 @@ h1 {
     color: #0f6b5c;                 /* hex */
 }
 
-h1 { font-size: 6vw; }   /* tested: scales with the window */
+h1 { font-size: 2.5rem; }   /* 40px: rem kept, a name at 6vw gets tiny on phones and huge on wide screens */
 h2 { font-size: 1.8rem; }   /* about 29px */
 h3 { font-size: 1.2rem; }   /* about 19px */
 
