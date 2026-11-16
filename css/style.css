@@ -190,3 +190,7 @@ ol li:first-child {
 tbody tr:nth-child(even) {
     background-color: #edf4f1;
 }
+
+.card:hover {
+    background-color: #f0f7f4;
+}
