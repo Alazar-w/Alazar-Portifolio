@@ -368,3 +368,11 @@ footer {
 dialog::backdrop {
     background-color: rgba(6, 54, 46, 0.6);   /* green-tinted dimming */
 }
+
+.card img {
+    opacity: 0.85;
+}
+
+.card:hover img {
+    opacity: 1;
+}
