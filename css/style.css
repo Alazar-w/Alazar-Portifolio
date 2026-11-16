@@ -2,8 +2,68 @@
    Portfolio stylesheet — Alazar Walle
    ========================================== */
 
+/* Palette
+   Primary  #0f6b5c   (deep green)
+   Dark     #1d2b2a   (text)
+   Accent   hsl(42, 95%, 50%)   (gold)
+   Light    #f3f7f5   (page background)
+*/
+
 /* ---------- Base ---------- */
+html {
+    font-size: 16px;   /* 1rem = 16px everywhere */
+}
+
 body {
-    background-color: #f4f6f9;   /* very light grey-blue */
-    font-family: Arial, sans-serif;
+    background-color: #f3f7f5;
+    color: #1d2b2a;                 /* hex */
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;        /* 1.6 × the font size: easier to read */
+}
+
+h1 {
+    color: #0f6b5c;                 /* hex */
+}
+
+h1 { font-size: 2.5rem; }   /* 40px: rem kept, a name at 6vw gets tiny on phones and huge on wide screens */
+h2 { font-size: 1.8rem; }   /* about 29px */
+h3 { font-size: 1.2rem; }   /* about 19px */
+
+h2 {
+    color: rgb(15, 107, 92);        /* the same blue in RGB */
+}
+
+h3 {
+    color: hsl(170, 75%, 24%);      /* the same blue in HSL */
+}
+
+mark {
+    background-color: rgba(250, 190, 10, 0.35);   /* see-through orange */
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+a {
+    color: #0f6b5c;
+    text-decoration: none;   /* removes the underline */
+}
+
+blockquote {
+    font-size: 1.2em;        /* 1.2 × the size of its parent */
+    font-style: italic;
+}
+
+code, pre {
+    font-family: 'Courier New', monospace;
 }
