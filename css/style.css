@@ -327,3 +327,26 @@ header {
                       linear-gradient(135deg, #0f6b5c, #06362e);
     color: white;
 }
+
+header h1 {
+    color: white;                        /* beats h1 (1 point) */
+}
+
+header .tagline {
+    color: rgba(255, 255, 255, 0.85);   /* 85% white */
+}
+
+header nav a:link,
+header nav a:visited {
+    color: white;                        /* beats a:link (11 points) */
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+header .btn {
+    background-color: hsl(42, 95%, 50%);
+    color: #1d2b2a;
+}
