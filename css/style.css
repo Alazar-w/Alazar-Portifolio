@@ -345,6 +345,7 @@ header nav a:hover {
 
 header .btn {
     background-color: hsl(42, 95%, 50%);
+    background-image: none;   /* the .btn gradient is painted on top of the colour */
     color: #1d2b2a;
 }
 
