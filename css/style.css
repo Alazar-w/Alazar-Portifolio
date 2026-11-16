@@ -9,12 +9,18 @@
    Light    #f3f7f5   (page background)
 */
 
+/* ---------- Reset ---------- */
+* {
+    box-sizing: border-box;   /* width includes padding and border */
+}
+
 /* ---------- Base ---------- */
 html {
     font-size: 16px;   /* 1rem = 16px everywhere */
 }
 
 body {
+    margin: 0;                /* remove the browser's default 8px */
     background-color: #f3f7f5;
     color: #1d2b2a;                 /* hex */
     font-family: 'Nunito', Arial, sans-serif;
@@ -198,4 +204,22 @@ tbody tr:nth-child(even) {
 /* links to my own pages, except the menu links */
 :not(nav) > a[href$=".html"]::after {
     content: " →";
+}
+
+/* ---------- Layout ---------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
 }
