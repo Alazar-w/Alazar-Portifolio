@@ -118,3 +118,7 @@ h2 + p {
 legend ~ label {
     font-weight: 600;
 }
+
+p { color: red; }                    /* 1 point   */
+header p { color: green; }           /* 2 points  */
+header .tagline { color: purple; }   /* 11 points */
