@@ -223,3 +223,27 @@ footer {
     padding: 1.5rem 1rem;
     margin-top: 3rem;
 }
+
+/* ---------- Display ---------- */
+#logo,
+header img {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+header img {
+    border: 4px solid white;
+    border-radius: 50%;   /* rounds the corners into a circle */
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border: 2px solid #0f6b5c;
+}
+
+label[for^="lvl"] {
+    display: inline-block;
+    width: 7rem;
+}
