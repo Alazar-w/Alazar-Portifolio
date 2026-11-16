@@ -296,3 +296,26 @@ select,
 textarea {
     padding: 0.4rem;
 }
+
+/* ---------- Tables ---------- */
+table {
+    border-collapse: collapse;   /* one line between cells, like cellspacing="0" */
+    margin: 1rem 0;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #c3d3cc;   /* like border="1" */
+    padding: 0.5rem 0.75rem;     /* like cellpadding */
+}
+
+caption {
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+/* ---------- Lists ---------- */
+ul ul {
+    list-style-type: square;     /* like type="square" */
+}
