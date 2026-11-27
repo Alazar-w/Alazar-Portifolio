@@ -1,0 +1,380 @@
+/* ==========================================
+   Portfolio stylesheet — Alazar Walle
+   ========================================== */
+
+/* Palette
+   Primary  #0f6b5c   (deep green)
+   Dark     #1d2b2a   (text)
+   Accent   hsl(42, 95%, 50%)   (gold)
+   Light    #f3f7f5   (page background)
+*/
+
+/* ---------- Reset ---------- */
+* {
+    box-sizing: border-box;   /* width includes padding and border */
+}
+
+/* ---------- Base ---------- */
+html {
+    font-size: 16px;   /* 1rem = 16px everywhere */
+}
+
+body {
+    margin: 0;                /* remove the browser's default 8px */
+    background-color: #f3f7f5;
+    color: #1d2b2a;                 /* hex */
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;        /* 1.6 × the font size: easier to read */
+}
+
+/* ---------- Headings ---------- */
+h1, h2, h3 {
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+h1 {
+    color: #0f6b5c;                 /* hex */
+    font-size: 2.5rem;   /* 40px: rem kept, a name at 6vw gets tiny on phones and huge on wide screens */
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: rgb(15, 107, 92);        /* the same green in RGB */
+    font-size: 1.8rem;   /* about 29px */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+h3 {
+    color: hsl(170, 75%, 24%);      /* the same green in HSL */
+    font-size: 1.2rem;   /* about 19px */
+}
+
+mark {
+    background-color: rgba(250, 190, 10, 0.35);   /* see-through gold */
+}
+
+a {
+    color: #0f6b5c;
+    text-decoration: none;   /* removes the underline */
+}
+
+blockquote {
+    font-size: 1.2em;        /* 1.2 × the size of its parent */
+    font-style: italic;
+}
+
+code, pre {
+    font-family: 'Courier New', monospace;
+}
+
+/* ---------- Components ---------- */
+.tagline {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #5b6e6a;
+    letter-spacing: 1px;
+}
+
+.btn {
+    background-color: #0f6b5c;
+    background-image: linear-gradient(#0f6b5c, #0a5044);
+    color: white;
+    font-family: inherit;      /* buttons do not inherit fonts by default */
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: #5b6e6a;
+}
+
+.card {
+    background-color: white;
+}
+
+/* ---------- Combinators ---------- */
+/* descendant: every link inside the menu */
+nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* child: only paragraphs directly inside a card */
+.card > p {
+    color: #5b6e6a;
+}
+
+/* adjacent sibling: the first paragraph after each section heading */
+h2 + p {
+    font-size: 1.1rem;
+}
+
+/* general sibling: every label after a legend in the same fieldset */
+legend ~ label {
+    font-weight: 600;
+}
+
+/* ---------- Forms ---------- */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    border: 2px solid #0f6b5c;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+abbr[title] {
+    cursor: help;
+    text-decoration: underline dotted;
+}
+
+[class*="btn"] {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ---------- Link icons ---------- */
+a[href^="https"]::after {
+    content: " ↗";            /* leaves this site */
+}
+
+a[href^="mailto"]::before {
+    content: "✉ ";
+}
+
+a[href^="tel"]::before {
+    content: "☎ ";
+}
+
+a[download]::before {
+    content: "⬇ ";
+}
+
+h2::before {
+    content: "// ";
+    color: hsl(42, 95%, 50%);   /* accent gold */
+}
+
+h2 + p::first-line {
+    font-weight: 600;
+}
+
+/* ---------- Link states ---------- */
+a:link    { color: #0f6b5c; }     /* not visited yet */
+a:visited { color: #6a3fa0; }     /* already visited */
+a:hover   { color: hsl(42, 95%, 30%); text-decoration: underline; }
+a:active  { color: #b03a2e; }     /* while the mouse button is down */
+
+.btn:hover {
+    background-color: #0a5044;    /* darker green */
+}
+
+.btn-secondary:hover {
+    background-color: #455754;
+}
+
+/* first step of every ordered list */
+ol li:first-child {
+    font-weight: 600;
+}
+
+/* striped table rows */
+tbody tr:nth-child(even) {
+    background-color: #edf4f1;
+}
+
+.card:hover {
+    background-color: #f0f7f4;
+}
+
+/* links to my own pages, except the menu links */
+:not(nav) > a[href$=".html"]::after {
+    content: " →";
+}
+
+/* ---------- Layout ---------- */
+main {
+    max-width: 700px;   /* tried 700px and 1200px: 700px gives the most comfortable line length, nothing overflows */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+}
+
+/* ---------- Display ---------- */
+#logo,
+header img {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+header img {
+    border: 4px solid white;
+    border-radius: 50%;   /* rounds the corners into a circle */
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border: 2px solid #0f6b5c;
+}
+
+label[for^="lvl"] {
+    display: inline-block;
+    width: 7rem;
+}
+
+/* ---------- Spacing and borders ---------- */
+section,
+aside {
+    margin: 2rem 0;
+    padding: 1.5rem;
+}
+
+aside {
+    border-left: 6px solid hsl(42, 95%, 50%);
+}
+
+.card {
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid #d3e0db;
+    border-left: 4px solid hsl(42, 95%, 50%);   /* accent on the left only */
+}
+
+.card img,
+video {
+    display: block;
+    max-width: 100%;   /* never wider than the card */
+    height: auto;      /* keep the proportions */
+}
+
+iframe {
+    display: block;
+    max-width: 100%;   /* no height: auto here, iframes have no natural height */
+}
+
+.btn {
+    padding: 0.6rem 1.2rem;
+    margin: 0.5rem 0.25rem 0 0;
+}
+
+fieldset {
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border: 2px solid #d3e0db;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.4rem;
+}
+
+/* ---------- Tables ---------- */
+table {
+    border-collapse: collapse;   /* one line between cells, like cellspacing="0" */
+    margin: 1rem 0;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #c3d3cc;   /* like border="1" */
+    padding: 0.5rem 0.75rem;     /* like cellpadding */
+}
+
+caption {
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+/* ---------- Lists ---------- */
+ul ul {
+    list-style-type: square;     /* like type="square" */
+}
+
+/* ---------- Header ---------- */
+header {
+    background-image: url("../images/pattern.png"),
+                      linear-gradient(120deg, #0f6b5c, #06362e);
+    color: white;
+}
+
+header h1 {
+    color: white;                        /* beats h1 (1 point) */
+}
+
+header .tagline {
+    color: rgba(255, 255, 255, 0.85);   /* 85% white */
+}
+
+header nav a:link,
+header nav a:visited {
+    color: white;                        /* beats a:link (11 points) */
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+header .btn {
+    background-color: hsl(42, 95%, 50%);
+    background-image: none;   /* the .btn gradient is painted on top of the colour */
+    color: #1d2b2a;
+}
+
+/* ---------- Contact ---------- */
+#contact {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+                      url("../images/contact-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+aside {
+    background-image: radial-gradient(circle at top left, #fff4d1, white 70%);
+}
+
+footer {
+    background-color: #1d2b2a;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+dialog::backdrop {
+    background-color: rgba(6, 54, 46, 0.6);   /* green-tinted dimming */
+}
+
+.card img {
+    opacity: 0.85;
+}
+
+.card:hover img {
+    opacity: 1;
+}

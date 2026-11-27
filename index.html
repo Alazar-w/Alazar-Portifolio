@@ -10,6 +10,8 @@
     <meta name="author" content="Alazar Walle">
     <title> Alazar Walle | Projects</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,9 +19,9 @@
         <canvas id="logo" width="120" height="120">Alazar Walle logo</canvas>
         <h1>Alazar Walle<br><img src="images/profile.jpg" alt="Portrait of Alazar Walle smiling" title="Alazar Walle"
                 width="200" height="200"></h1>
-        <p>Software Engineering student and aspiring web developer.</p>
+        <p class="tagline">Software Engineering student and aspiring web developer.</p>
 
-        <button type="button" onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
+        <button type="button" class="btn" onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
         <dialog id="hireDialog">
             <h2>Available for internships</h2>
             <p>I am available for internships and freelance web projects from June 2027.</p>
@@ -28,11 +30,11 @@
         </dialog>
 
         <nav>
-            <a href="#about">About</a> |
-            <a href="#skills">Skills</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#education">Education</a> |
-            <a href="#contact">Contact</a> |
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
             <a href="projects.html">All Projects</a>
         </nav>
     </header>
@@ -57,9 +59,11 @@
 
         <section>
             <h2>What Inspires Me</h2>
-            <blockquote>
-                “The best way to predict the future is to invent it.” — Alan Kay
-            </blockquote>
+            <aside>
+                <blockquote>
+                    “The best way to predict the future is to invent it.” — Alan Kay
+                </blockquote>
+            </aside>
             <p>My teacher always says <q>practice beats theory</q>, so I code every day.</p>
             <p>Book I am reading: <cite>Clean Code</cite> by Robert C. Martin</p>
 
@@ -75,14 +79,14 @@
             <h2>Skills</h2>
             <ul>
                 <li>Programming Languages
-                    <ul type="square">
+                    <ul>
                         <li>Python</li>
                         <li>C++</li>
                         <li>Java</li>
                     </ul>
                 </li>
                 <li>Web Development
-                    <ul type="circle">
+                    <ul>
                         <li>HTML</li>
                         <li>CSS (learning)</li>
                         <li>JavaScript (next)</li>
@@ -138,20 +142,26 @@
 
         <section id="projects">
             <h2>Projects</h2>
-            <h3>Simple Calculator</h3>
-            <p>A calculator that performs basic arithmetic operations.</p>
-            <img src="images/project-calculator.png" alt="Screenshot of the calculator showing 12 + 30 = 42" width="400"
-                height="250">
-            <p>A calculator that adds, subtracts, multiplies and divides.</p>
+            <article class="card">
+                <h3>Simple Calculator</h3>
+                <p>A calculator that performs basic arithmetic operations.</p>
+                <img src="images/project-calculator.png" alt="Screenshot of the calculator showing 12 + 30 = 42" width="400"
+                    height="250">
+                <p>A calculator that adds, subtracts, multiplies and divides.</p>
+            </article>
 
-            <h3>Library Management System</h3>
-            <p>A program for borrowing and returning books.</p>
-            <img src="images/project-library.png" alt="Screenshot of the Library management system" width="400"
-                height="250">
-            <p>The library is managed across the system.</p>
+            <article class="card">
+                <h3>Library Management System</h3>
+                <p>A program for borrowing and returning books.</p>
+                <img src="images/project-library.png" alt="Screenshot of the Library management system" width="400"
+                    height="250">
+                <p>The library is managed across the system.</p>
+            </article>
 
-            <h3>Chess Game</h3>
-            <p>A game where players compete using chess pieces.</p>
+            <article class="card">
+                <h3>Chess Game</h3>
+                <p>A game where players compete using chess pieces.</p>
+            </article>
 
             <h3>My First Python Program</h3>
             <p>The first thing I wrote in Python was <code>print("Hello, World!")</code>.
@@ -195,7 +205,7 @@ print("Hello", i)
                 <label for="degree">Degree progress:</label>
                 <progress id="degree" value="40" max="100">40%</progress> 40%
             </p>
-            <table border="1" cellpadding="2" cellspacing="0">
+            <table>
                 <thead>
                     <tr>
                         <th>Year</th>
@@ -482,8 +492,8 @@ print("Hello", i)
                     <input type="checkbox" id="copy" name="copy" value="yes">
                     <label for="copy">Send me a copy of this message</label>
                 </fieldset>
-                <button type="submit">Send Message</button>
-                <button type="reset">Clear</button>
+                <button type="submit" class="btn">Send Message</button>
+                <button type="reset" class="btn btn-secondary">Clear</button>
             </form>
 
         </section>
